@@ -21,7 +21,7 @@ public class MenuTest {
     public void 옵션그룹이름_변경_오류() {
         Menu menu = aMenu().basic(anOptionGroupSpec().name("기본").build()).build();
 
-        menu.validateOrder("", Arrays.asList(anOptionGroup().name("기본 메뉴").build()));
+        menu.validateOrder("삼겹살 1인세트", Arrays.asList(anOptionGroup().name("기본 메뉴").build()));
     }
 
 
@@ -31,7 +31,7 @@ public class MenuTest {
                         .basic(anOptionGroupSpec().options(Arrays.asList(anOptionSpec().name("1인분").build())).build())
                         .build();
 
-        menu.validateOrder("", Arrays.asList(anOptionGroup().options(Arrays.asList(anOption().name("혼밥").build())).build()));
+        menu.validateOrder("삼겹살 1인세트", Arrays.asList(anOptionGroup().options(Arrays.asList(anOption().name("혼밥").build())).build()));
     }
 
 
@@ -43,7 +43,7 @@ public class MenuTest {
                                     .build())
                         .build();
 
-        menu.validateOrder("", Arrays.asList(anOptionGroup()
+        menu.validateOrder("삼겹살 1인세트", Arrays.asList(anOptionGroup()
                                     .options(Arrays.asList(anOption().name("1인분").price(Money.wons(10000)).build()))
                         .build()));
 

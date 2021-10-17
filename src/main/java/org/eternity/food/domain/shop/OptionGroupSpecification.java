@@ -61,7 +61,7 @@ public class OptionGroupSpecification {
     }
 
     public boolean isSatisfiedBy(OptionGroup optionGroup) {
-        return !isSatisfied(optionGroup.getName(), satisfied(optionGroup.getOptions()));
+        return isSatisfied(optionGroup.getName(), satisfied(optionGroup.getOptions()));
     }
 
     private boolean isSatisfied(String groupName, List<Option> satisfied) {
